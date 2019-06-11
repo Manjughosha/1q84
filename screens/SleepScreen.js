@@ -1,5 +1,6 @@
 import * as WebBrowser from "expo-web-browser";
 import React from "react";
+import styled from "styled-components";
 import {
   Image,
   Platform,
@@ -10,7 +11,7 @@ import {
   View
 } from "react-native";
 
-import { MonoText } from "../components/StyledText";
+import { Card } from "../components/Card";
 
 export default function SleepScreen() {
   return (
@@ -38,7 +39,7 @@ export default function SleepScreen() {
           <View
             style={[styles.codeHighlightContainer, styles.sleepScreenFilename]}
           >
-            <MonoText>screens/SleepScreen.js</MonoText>
+            <Text>screens/SleepScreen.js</Text>
           </View>
 
           <Text style={styles.getStartedText}>
@@ -119,6 +120,12 @@ function handleHelpPress() {
   );
 }
 
+const introContainer = styled.View`
+  background-color: white;
+  width: 100%;
+  height: 88px;
+`;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -135,9 +142,7 @@ const styles = StyleSheet.create({
     paddingTop: 30
   },
   welcomeContainer: {
-    alignItems: "center",
-    marginTop: 10,
-    marginBottom: 20
+    alignItems: "center"
   },
   welcomeImage: {
     width: 100,
